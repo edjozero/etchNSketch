@@ -1,0 +1,18 @@
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 960px;
+    margin: 0 auto;
+    border: solid 10px red;
+}
+
+#container div{
+    width: 55px;
+    height: 55px;
+    border: 2px solid grey;
+    display: flex;
+    flex-wrap: wrap;
+}
+
