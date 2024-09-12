@@ -17,6 +17,7 @@ body{
 }
 
 .grid{
-    border: 2px solid grey;
+    border: 1px solid grey;
+    box-sizing: border-box;
 }
 

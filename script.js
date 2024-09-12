@@ -24,11 +24,11 @@ function starterDivs(num){
     }
 
     const grid = document.querySelectorAll(".grid");
-    const gridSize = Math.ceil(960/num);
+    const gridSize = Math.floor(960/num);
 
     grid.forEach(grid => {
         grid.style.width = gridSize + "px";
         grid.style.height = gridSize + "px";
     });
 }
-starterDivs(8);
+starterDivs(16);
