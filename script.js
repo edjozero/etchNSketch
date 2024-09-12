@@ -9,6 +9,10 @@ const container = document.querySelector("#container");
 EVENT LISTENERS
 */
 
+//add this here so that when the page loads, we start off with the 16x16 grid 
+document.addEventListener("DOMContentLoaded", (event) => {
+    starterDivs(16);
+});
 
 /* 
 FUNCTIONS
@@ -31,4 +35,3 @@ function starterDivs(num){
         grid.style.height = gridSize + "px";
     });
 }
-starterDivs(16);
