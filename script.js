@@ -10,7 +10,7 @@ EVENT LISTENERS
 */
 
 //add this here so that when the page loads, we start off with the 16x16 grid 
-document.addEventListener("DOMContentLoaded", (event) => {
+document.addEventListener("DOMContentLoaded", () => {
     createGrid(16);
 });
 
@@ -31,7 +31,14 @@ function createGrid(num){
     const gridSize = Math.floor(960/num);
 
     grid.forEach(grid => {
+        // sets the size of each square in the grid
         grid.style.width = gridSize + "px";
         grid.style.height = gridSize + "px";
+
+        // listener that will change square color when passing mouse over square
+        grid.addEventListener("mouseover", () => {
+            console.log("event triggered");
+            grid.classList.add("trail");
+        });
     });
 }
