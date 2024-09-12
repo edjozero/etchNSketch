@@ -11,13 +11,13 @@ EVENT LISTENERS
 
 //add this here so that when the page loads, we start off with the 16x16 grid 
 document.addEventListener("DOMContentLoaded", (event) => {
-    starterDivs(16);
+    createGrid(16);
 });
 
 /* 
 FUNCTIONS
 */
-function starterDivs(num){
+function createGrid(num){
     for(let i=0; i<num; i++){
         for(let j=0; j<num; j++){
             const div = document.createElement("div");
