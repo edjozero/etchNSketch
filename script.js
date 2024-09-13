@@ -17,6 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // with button press a new grid is created with the users input
 button.addEventListener("click", () => {
+    // clears out initial grid and newly created grids after creating a new grid
+    clearGrid();
+
+    // creates a new grid with user input
     newGrid();
 });
 
@@ -56,4 +60,9 @@ function newGrid(){
     let value = userInput.value;
 
     createGrid(value);
+}
+
+// clears out the created grid and leaves container empty
+function clearGrid(){
+    container.innerHTML = "";
 }
