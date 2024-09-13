@@ -3,6 +3,7 @@ VARIABLES
 */
 const container = document.querySelector("#container");
 
+const button = document.querySelector("#button");
 
 
 /* 
@@ -12,6 +13,11 @@ EVENT LISTENERS
 //add this here so that when the page loads, we start off with the 16x16 grid 
 document.addEventListener("DOMContentLoaded", () => {
     createGrid(16);
+});
+
+// with button press a new grid is created with the users input
+button.addEventListener("click", () => {
+    newGrid();
 });
 
 /* 
@@ -41,4 +47,13 @@ function createGrid(num){
             grid.classList.add("trail");
         });
     });
+}
+
+// grabs user input for new grid
+function newGrid(){
+    const userInput = document.querySelector("#userInput");
+
+    let value = userInput.value;
+
+    createGrid(value);
 }
