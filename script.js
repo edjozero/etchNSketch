@@ -28,6 +28,12 @@ button.addEventListener("click", () => {
 FUNCTIONS
 */
 function createGrid(num){
+    
+    if(num > 100){
+        prompt("Please only enter a number under 100", "Click Ok to continue");
+        return;
+    }
+
     for(let i=0; i<num; i++){
         for(let j=0; j<num; j++){
             const div = document.createElement("div");
