@@ -16,11 +16,20 @@ body{
     border: solid 50px red;
 }
 
+#titleAndButton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+}
+
 .grid{
     border: 1px solid grey;
     box-sizing: border-box;
 }
 
-.trail{
+/* .trail{
     background-color: black;
-}
+} */

@@ -47,8 +47,14 @@ function createGrid(num){
 
         // listener that will change square color when passing mouse over square
         grid.addEventListener("mouseover", () => {
-            console.log("event triggered");
-            grid.classList.add("trail");
+            // if we want to have the project only use black squares, uncomment line below and class in CSS and comment out RGB code below
+            // grid.classList.add("trail");
+
+            // random color for squares
+            let red = Math.floor(Math.random() * 256);
+            let green = Math.floor(Math.random() * 256);
+            let blue = Math.floor(Math.random() * 256);
+            grid.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
         });
     });
 }
